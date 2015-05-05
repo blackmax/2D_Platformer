@@ -61,4 +61,4 @@ public class CharacterController2D : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 }
-// test
+// test comment
