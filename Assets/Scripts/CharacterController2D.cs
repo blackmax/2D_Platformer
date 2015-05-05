@@ -11,6 +11,9 @@ public class CharacterController2D : MonoBehaviour {
 	public bool grounded = false;
 	public bool hasJumped = false;
 	public bool jump = false;
+
+	public int counter = 0;
+
 	private bool facingRight = true;
 	private Rigidbody2D player;
 
@@ -19,7 +22,9 @@ public class CharacterController2D : MonoBehaviour {
 	}
 	
 	void Update() {
-		if (!jump) jump = Input.GetKeyDown(KeyCode.UpArrow);
+		if (counter == 0) {
+			if (!jump) jump = Input.GetKeyDown(KeyCode.UpArrow);
+		}
 	}
 	
 	
@@ -27,7 +32,9 @@ public class CharacterController2D : MonoBehaviour {
 	void FixedUpdate () {
 		float move = Input.GetAxis("Horizontal");
 		player.velocity = new Vector2(move * playerSpeed, player.velocity.y);
-		
+
+		if (player.velocity.y < -15) player.velocity = new Vector2(player.velocity.x, -15);
+
 		if (move > 0 && !facingRight) Flip();
 		else if (move < 0 && facingRight) Flip();
 
@@ -36,13 +43,16 @@ public class CharacterController2D : MonoBehaviour {
 		else if (Input.GetKey(KeyCode.LeftArrow)) move = -1;
 		else move = 0;
 
+		if (Input.GetKeyDown(KeyCode.UpArrow)) counter += 1;
 
 		grounded = false;
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius, groundLayer);
 		for (int i = 0; i < colliders.Length; i++)
 		{
-			if (colliders[i].gameObject != gameObject)
+			if (colliders[i].gameObject != gameObject) {
 				grounded = true;
+				counter = 0;
+			}
 		}
 		//grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		
