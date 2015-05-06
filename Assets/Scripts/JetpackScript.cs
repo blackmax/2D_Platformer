@@ -5,9 +5,10 @@ public class JetpackScript : MonoBehaviour {
 
 	public bool jetpackEnabled = false; //Включение - выкючение джетпака
 	public float jetpackFlyTime = 2f;	//Время полета
-	public float jetpackForce = 200f;	//Сила джетпака
+	public float jetpackSpeed = 8f;	//Сила джетпака
 	public float jetpackFuelRecharge = 0.5f;
-	public float test;
+	public bool jetpackRecharge = false;
+
 	private float jetpackFlyTimeStart;
 	private Rigidbody2D player;
 	private CharacterController2D playerControl;
@@ -19,28 +20,26 @@ public class JetpackScript : MonoBehaviour {
 		jetpackFlyTimeStart = jetpackFlyTime;
 
 	}
-	void Update () {
-		if (jetpackEnabled) {
-			if ((playerControl.counter > 0) && Input.GetKeyDown(KeyCode.UpArrow) && (jetpackFlyTime > 0f && player.velocity.y <= 0)) {
-				player.velocity = new Vector2(player.velocity.x, 0f);
-				test = jetpackForce - player.velocity.y;
-			}
-			else if ((playerControl.counter > 0) && Input.GetKeyDown(KeyCode.UpArrow) && (jetpackFlyTime > 0f && player.velocity.y > 0)) {
-				test = jetpackForce - player.velocity.y;
-			}
-		}
-	}
-	// Update is called once per frame
+
 	void FixedUpdate () {
 		// Если джетпак активен
 		if (jetpackEnabled) {
-			if ((playerControl.counter > 0) && Input.GetKey(KeyCode.UpArrow) &&(jetpackFlyTime > 0f)) {
+			if ((playerControl.counter > 0) && Input.GetKey(KeyCode.UpArrow) && (jetpackFlyTime > 0f) && !jetpackRecharge) {
 				jetpackFlyTime -= Time.deltaTime;
-				player.AddForce(new Vector2(0f, test));
+				player.velocity = new Vector2(player.velocity.x, jetpackSpeed);
 			}
 
-			if (jetpackFlyTime < jetpackFlyTimeStart) jetpackFlyTime += jetpackFuelRecharge * Time.deltaTime;
-			else jetpackFlyTime = jetpackFlyTimeStart;
+			if (jetpackFlyTime < 0) {
+				jetpackRecharge = true;
+				jetpackFlyTime += (jetpackFuelRecharge / 2) * Time.deltaTime;
+			}
+			else if (jetpackFlyTime < jetpackFlyTimeStart) {
+				jetpackFlyTime += jetpackFuelRecharge * Time.deltaTime;
+			}
+			else if (jetpackFlyTime > jetpackFlyTimeStart) {
+				jetpackFlyTime = jetpackFlyTimeStart;
+				jetpackRecharge = false;
+			}
 		};
 	}
 }
