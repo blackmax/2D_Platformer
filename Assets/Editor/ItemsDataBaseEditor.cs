@@ -5,8 +5,6 @@ using UnityEditor;
 [CustomEditor(typeof (ItemsDataBaseScript))]
 
 public class ItemsDataBaseEditor : Editor {
-	public enum test{};
-	test tt;
 	public override void OnInspectorGUI () {
 		ItemsDataBaseScript myScript = (ItemsDataBaseScript)target;
 
@@ -24,13 +22,20 @@ public class ItemsDataBaseEditor : Editor {
 
 
 
-
-
+		EditorGUILayout.Space();
 		if (GUILayout.Button("Create New Object")) {
 			myScript.CreateNewObject();
 		}
 
-
+		EditorGUILayout.Space();
+		EditorGUILayout.Space();
 		EditorGUILayout.HelpBox("Item Data Base", MessageType.None);
+		EditorGUILayout.Space();
+		EditorGUILayout.HelpBox("" + myScript.materials.Count, MessageType.None);
+		foreach(Items item in myScript.materials)
+		{
+			EditorGUILayout.HelpBox("" + item.itemName, MessageType.None);
+		}
+
 	}
 }
