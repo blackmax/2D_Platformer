@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class ItemsDataBaseScript : MonoBehaviour {
 
@@ -17,6 +18,10 @@ public class ItemsDataBaseScript : MonoBehaviour {
 
 
 	public List<Items> materials = new List<Items>();
+
+	private GameObject ItemObject;
+
+	string prefabPath = "Assets/Prefabs/Items/Materials/";
 	// Use this for initialization
 	void Start () {
 	
@@ -29,8 +34,19 @@ public class ItemsDataBaseScript : MonoBehaviour {
 
 	public void CreateNewObject() {
 		if (itemType == 0) {
-			materials.Add(new Items((int)itemType, icon, itemName, (int)materialType));
+			// Создание объекта в кэш
+			//materials.Add(new Items((int)itemType, icon, itemName, (int)materialType));
+			ItemObject = new GameObject(itemName);
+			ItemObject.AddComponent<SpriteRenderer>();
+			ItemObject.AddComponent<CircleCollider2D>();
+			ItemObject.AddComponent<Rigidbody2D>();
 
+
+			// Создание префаба
+			PrefabUtility.CreatePrefab(prefabPath + itemName + ".prefab", ItemObject);
+
+			// Очистка кэша
+			DestroyImmediate(ItemObject);
 		}
 		else {
 
