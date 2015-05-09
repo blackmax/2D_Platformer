@@ -2,22 +2,39 @@
 using System.Collections;
 
 public class BackgroundParallax : MonoBehaviour {
-	public Rigidbody2D player;
-
-	public Rigidbody2D background1;
-	public Rigidbody2D background2;
-	public Rigidbody2D background3;
-
-
+	public Transform[] backgrounds; //backgrounds for changes with paralax
+	private float[] parallaxScales; //coff to paralax
+	public float smoothing = 1f; //coff of blur
+	
+	private Transform cam;
+	private Vector3 previousCamPos;
+	//вызывается прежде чем вызовется Start() ахуенно для настройки
+	void  Awake(){
+		cam = Camera.main.transform;
+	}
+	
 	// Use this for initialization
 	void Start () {
-	
+		previousCamPos = cam.position;
+		parallaxScales = new float[backgrounds.Length];
+		
+		for (int i = 0; i<backgrounds.Length; i++){
+			parallaxScales[i] = backgrounds[i].position.z*-1;
+		}
+		
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		background1.velocity = new Vector2(player.velocity.x * 0.3f, player.velocity.y * 0.1f);
-		background2.velocity = new Vector2(player.velocity.x * 0.5f, player.velocity.y * 0.3f);
-		background3.velocity = new Vector2(player.velocity.x * 0.8f, player.velocity.y * 0.5f);
+	void Update () {
+		float parallax;
+		float backgroundTargetPosX;
+		Vector3 backgroundTargetPos;
+		for (int i = 0; i<backgrounds.Length; i++){
+			parallax = (previousCamPos.x - cam.position.x)*parallaxScales[i];
+			backgroundTargetPosX = backgrounds[i].position.x+parallax;
+			backgroundTargetPos = new Vector3 (backgroundTargetPosX, backgrounds[i].position.y, backgrounds[i].position.z);
+			backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing + Time.deltaTime);
+		};
+		previousCamPos = cam.position;
 	}
 }
