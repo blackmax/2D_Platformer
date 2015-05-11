@@ -2,18 +2,26 @@
 using System.Collections;
 
 public class BackgroundParallax : MonoBehaviour {
-	public Transform[] backgrounds; //backgrounds for changes with paralax
-	private float[] parallaxScales; //coff to paralax
-	public float smoothing = 1f; //coff of blur
+	public Transform background1;
+	public Transform background2;
+	public Transform background3;
+
 	private Transform cam;
 	private Vector3 previousCamPos;
 
-	float parallax;
-	float backgroundTargetPosX;
+	public float parallax;
+	float background1TargetPosX;
 	float backgroundTargetPosY;
-	Vector3 backgroundTargetPos;
+	Vector3 background1TargetPos;
 
-	//вызывается прежде чем вызовется Start() ахуенно для настройки
+	float background2TargetPosX;
+	//float backgroundTargetPosY;
+	Vector3 background2TargetPos;
+
+	float background3TargetPosX;
+	//float backgroundTargetPosY;
+	Vector3 background3TargetPos;
+
 	void  Awake(){
 		cam = Camera.main.transform;
 	}
@@ -21,22 +29,29 @@ public class BackgroundParallax : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		previousCamPos = cam.position;
-		parallaxScales = new float[backgrounds.Length];
-		
-		for (int i = 0; i<backgrounds.Length; i++){
-			parallaxScales[(backgrounds.Length-1)-i] = backgrounds[i].position.z*-1;
-		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		for (int i = 0; i<backgrounds.Length; i++){
-			parallax = (previousCamPos.x - cam.position.x)*parallaxScales[i];
-			backgroundTargetPosX = backgrounds[i].position.x+parallax;
-			backgroundTargetPosY = backgrounds[i].position.y+(previousCamPos.y - cam.position.y)*(parallaxScales[(backgrounds.Length-1)-i]);//parallax*0.5f;
-			backgroundTargetPos = new Vector3 (backgroundTargetPosX, backgroundTargetPosY, backgrounds[i].position.z);
-			backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing + Time.deltaTime);
-		};
+		parallax = (previousCamPos.x - cam.position.x);
+
+		background1TargetPosX = background1.position.x - parallax * 30;
+		background1TargetPos = new Vector3 (background1TargetPosX, background1.position.y, background1.position.z);
+		background1.position = Vector3.Lerp(background1.position, background1TargetPos, Time.deltaTime);
+
+		background2TargetPosX = background2.position.x - parallax * 40;
+		background2TargetPos = new Vector3 (background2TargetPosX, background2.position.y, background2.position.z);
+		background2.position = Vector3.Lerp(background2.position, background2TargetPos, Time.deltaTime);
+
+		background3TargetPosX = background3.position.x - parallax * 50;
+		background3TargetPos = new Vector3 (background3TargetPosX, background3.position.y, background3.position.z);
+		background3.position = Vector3.Lerp(background3.position, background3TargetPos, Time.deltaTime);
+
+
+
+		//backgroundTargetPosY = background1.position.y + (previousCamPos.y - cam.position.y);
+
+
 		previousCamPos = cam.position;
 	}
 }

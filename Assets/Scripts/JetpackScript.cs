@@ -12,6 +12,7 @@ public class JetpackScript : MonoBehaviour {
 	private float jetpackFlyTimeStart;
 	private Rigidbody2D player;
 	private CharacterController2D playerControl;
+	private bool jetpackUse = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,10 +22,14 @@ public class JetpackScript : MonoBehaviour {
 
 	}
 
+	void Update () {
+		jetpackUse = Input.GetKey(KeyCode.UpArrow);
+	}
+
 	void FixedUpdate () {
 		// Если джетпак активен
 		if (jetpackEnabled) {
-			if ((playerControl.counter > 0) && Input.GetKey(KeyCode.UpArrow) && (jetpackFlyTime > 0f) && !jetpackRecharge) {
+			if ((playerControl.counter > 0) && jetpackUse && (jetpackFlyTime > 0f) && !jetpackRecharge) {
 				jetpackFlyTime -= Time.deltaTime;
 				player.velocity = new Vector2(player.velocity.x, jetpackSpeed);
 			}
