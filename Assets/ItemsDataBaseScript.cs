@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
-
+#endif
 public class ItemsDataBaseScript : MonoBehaviour {
-
+	#if UNITY_EDITOR
 	public enum typeOfItem {Materials = 0, Equipment = 1};
 	public enum allMaterials {Metal, Organic, Crystal};
 
@@ -58,4 +59,5 @@ public class ItemsDataBaseScript : MonoBehaviour {
 		itemName = null;
 		materialType = 0;
 	}
+	#endif
 }
