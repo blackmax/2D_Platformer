@@ -38,11 +38,11 @@ public class CharacterController2D : MonoBehaviour {
 		if (move > 0 && !facingRight) Flip();
 		else if (move < 0 && facingRight) Flip();
 
-
+		/*
 		if (Input.GetKey(KeyCode.RightArrow)) move = 1;
 		else if (Input.GetKey(KeyCode.LeftArrow)) move = -1;
 		else move = 0;
-
+		*/
 		if (Input.GetKeyDown(KeyCode.UpArrow)) counter += 1;
 
 		grounded = false;
