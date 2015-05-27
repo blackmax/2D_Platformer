@@ -15,6 +15,10 @@ public class ShowFPS : MonoBehaviour {
 		timeleft = updateInterval;  
 		Application.targetFrameRate = 60;
 	}
+
+	void Awake () {
+		Application.targetFrameRate = 60;
+	}
 	
 	// Update is called once per frame
 	void Update () {
