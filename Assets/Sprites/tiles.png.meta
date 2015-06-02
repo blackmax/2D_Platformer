@@ -1,40 +1,35 @@
 fileFormatVersion: 2
-guid: bc25b6c103cc74cc4805ab16823de8bb
-timeCreated: 1433234016
-licenseType: Free
+guid: 86efc0505867be248bc5ac7c4107fc77
+timeCreated: 1433276351
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: background_0
-    21300002: background_1
-    21300004: background_2
-    21300006: background_3
-    21300008: background_4
-    21300010: background_5
-    21300012: background_6
-    21300014: background_7
-    21300016: background_8
-    21300018: background_9
-    21300020: background_10
-    21300022: background_11
-    21300024: background_12
-    21300026: background_13
-    21300028: background_14
-    21300030: background_15
-    21300032: background_16
-    21300034: background_17
-    21300036: background_18
-    21300038: background_19
-    21300040: background_20
-    21300042: background_21
-    21300044: background_22
-    21300046: background_23
-    21300048: background_24
-    21300050: background_25
-    21300052: background_26
-    21300054: background_27
-    21300056: background_28
-    21300058: background_29
-    21300060: background_30
+    21300000: tiles_0
+    21300002: tiles_1
+    21300004: tiles_2
+    21300006: tiles_3
+    21300008: tiles_4
+    21300010: tiles_5
+    21300012: tiles_6
+    21300014: tiles_7
+    21300016: tiles_8
+    21300018: tiles_9
+    21300020: tiles_10
+    21300022: tiles_11
+    21300024: tiles_12
+    21300026: tiles_13
+    21300028: tiles_14
+    21300030: tiles_15
+    21300032: tiles_16
+    21300034: tiles_17
+    21300036: tiles_18
+    21300038: tiles_19
+    21300040: tiles_20
+    21300042: tiles_21
+    21300044: tiles_22
+    21300046: tiles_23
+    21300048: tiles_24
+    21300050: tiles_25
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,7 +52,7 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -2
   maxTextureSize: 256
   textureSettings:
     filterMode: 0
@@ -80,311 +75,261 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: background_0
+    - name: tiles_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 221
+        x: 1
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_1
+    - name: tiles_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 221
+        x: 20
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_2
+    - name: tiles_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 221
+        x: 39
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_3
+    - name: tiles_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 221
+        x: 58
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_4
+    - name: tiles_4
       rect:
         serializedVersion: 2
-        x: 68
-        y: 221
+        x: 77
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_5
+    - name: tiles_5
       rect:
         serializedVersion: 2
-        x: 85
-        y: 221
+        x: 96
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_6
+    - name: tiles_6
       rect:
         serializedVersion: 2
-        x: 102
-        y: 221
+        x: 115
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_7
+    - name: tiles_7
       rect:
         serializedVersion: 2
-        x: 119
-        y: 221
+        x: 134
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_8
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 221
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_9
+    - name: tiles_8
       rect:
         serializedVersion: 2
         x: 153
-        y: 221
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_10
+    - name: tiles_9
       rect:
         serializedVersion: 2
-        x: 170
-        y: 221
+        x: 172
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_11
+    - name: tiles_10
       rect:
         serializedVersion: 2
-        x: 187
-        y: 221
+        x: 191
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_12
+    - name: tiles_11
       rect:
         serializedVersion: 2
-        x: 204
-        y: 221
+        x: 210
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_13
+    - name: tiles_12
       rect:
         serializedVersion: 2
-        x: 221
-        y: 221
+        x: 229
+        y: 229
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_14
+    - name: tiles_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 204
+        x: 1
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_15
+    - name: tiles_14
       rect:
         serializedVersion: 2
-        x: 17
-        y: 204
+        x: 20
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_16
+    - name: tiles_15
       rect:
         serializedVersion: 2
-        x: 34
-        y: 204
+        x: 39
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_17
+    - name: tiles_16
       rect:
         serializedVersion: 2
-        x: 51
-        y: 204
+        x: 58
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_18
+    - name: tiles_17
       rect:
         serializedVersion: 2
-        x: 68
-        y: 204
+        x: 77
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_19
+    - name: tiles_18
       rect:
         serializedVersion: 2
-        x: 85
-        y: 204
+        x: 96
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_20
+    - name: tiles_19
       rect:
         serializedVersion: 2
-        x: 102
-        y: 204
+        x: 115
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_21
+    - name: tiles_20
       rect:
         serializedVersion: 2
-        x: 119
-        y: 204
+        x: 134
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_22
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 204
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_23
+    - name: tiles_21
       rect:
         serializedVersion: 2
         x: 153
-        y: 204
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_24
+    - name: tiles_22
       rect:
         serializedVersion: 2
-        x: 170
-        y: 204
+        x: 172
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_25
+    - name: tiles_23
       rect:
         serializedVersion: 2
-        x: 187
-        y: 204
+        x: 191
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_26
+    - name: tiles_24
       rect:
         serializedVersion: 2
-        x: 204
-        y: 204
+        x: 210
+        y: 210
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_27
+    - name: tiles_25
       rect:
         serializedVersion: 2
-        x: 221
-        y: 204
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_28
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 187
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_29
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 187
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: background_30
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 187
+        x: 229
+        y: 210
         width: 16
         height: 16
       alignment: 0
