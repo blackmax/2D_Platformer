@@ -17,12 +17,11 @@ public class CharacterController2D : MonoBehaviour {
 
 	private bool facingRight = true;
 	private Rigidbody2D player;
-
+	public float direction = 1f;
 	public float move = 0f;
 	public float testMove = 0f;
 	public float testSpeed = 10f;
-	public bool moveLeft = false;
-	public bool moveRight = false;
+	public bool moving = false;
 
 	void Start () {
 		player = GetComponent<Rigidbody2D>();
@@ -35,30 +34,29 @@ public class CharacterController2D : MonoBehaviour {
 	}
 
 	public void Left () {
-		moveLeft = true;
-		moveRight = false;
+		moving = true;
+		direction = -1f;
 	}
 	public void Stop () {
-		moveLeft = false;
-		moveRight = false;
+		moving = false;
 	}
 	public void Right () {
-		moveRight = true;
-		moveLeft = false;
+		moving = true;
+		direction = 1f;
 	}
-	
+
+	public void Jump () {
+		if (counter == 0) {
+			if (!jump) jump = true;
+		}
+		counter += 1;
+	}
 	void Movement () {
-		if (moveLeft && move > -1f) move -= 4f * Time.deltaTime;
-		else if (moveLeft && move < -1f) move = -1f;
-
-		if (!moveLeft && !moveRight && move < -0.5f) move += 5f * Time.deltaTime;
-		else if (!moveLeft && !moveRight && move > -0.5f) move = 0f;
-
-		if (moveRight && move < 1f) move += 4f * Time.deltaTime;
-		else if (moveRight && move > 1f) move = 1f;
-		
-		if (!moveRight && !moveLeft && move > 0.5f) move -= 5f * Time.deltaTime;
-		else if (!moveRight && !moveLeft && move < 0.5f) move = 0f;
+		// Движение
+		if (moving && move < 1f) move += 4f * Time.deltaTime;
+		else if (moving && move >= 1f) move = 1f;
+		else if (!moving && move > 0f) move -= 5f * Time.deltaTime;
+		else if (!moving && move < 0f) move = 0f;
 	}
 
 
@@ -66,16 +64,14 @@ public class CharacterController2D : MonoBehaviour {
 	void FixedUpdate () {
 		Movement ();
 
-
-
 		//move = Input.GetAxis("Horizontal");
 
-		player.velocity = new Vector2(move * playerSpeed, player.velocity.y);
+		player.velocity = new Vector2(direction * move * playerSpeed, player.velocity.y);
 
 		if (player.velocity.y < -15) player.velocity = new Vector2(player.velocity.x, -15);
 
-		if (move > 0 && !facingRight) Flip();
-		else if (move < 0 && facingRight) Flip();
+		if (direction > 0 && !facingRight) Flip();
+		else if (direction < 0 && facingRight) Flip();
 
 		/*
 		if (Input.GetKey(KeyCode.RightArrow)) move = 1;
@@ -104,7 +100,7 @@ public class CharacterController2D : MonoBehaviour {
 
 	private void Flip() {
 		facingRight = !facingRight;
-
+		move = 0f;
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
