@@ -64,6 +64,11 @@ public class CharacterController2D : MonoBehaviour {
 	void FixedUpdate () {
 		Movement ();
 
+#if UNITY_EDITOR
+		if (Input.GetKey(KeyCode.LeftArrow)) Left();
+		else if (Input.GetKey(KeyCode.RightArrow)) Right();
+		else Stop();
+#endif
 		//move = Input.GetAxis("Horizontal");
 
 		player.velocity = new Vector2(direction * move * playerSpeed, player.velocity.y);
