@@ -1,0 +1,330 @@
+fileFormatVersion: 2
+guid: b4f4fe642318b1c4f8c6861b50783df3
+timeCreated: 1434706822
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: items 256_0
+    21300002: items 256_1
+    21300004: items 256_2
+    21300006: items 256_3
+    21300008: items 256_4
+    21300010: items 256_5
+    21300012: items 256_6
+    21300014: items 256_7
+    21300016: items 256_8
+    21300018: items 256_9
+    21300020: items 256_10
+    21300022: items 256_11
+    21300024: items 256_12
+    21300026: items 256_13
+    21300028: items 256_14
+    21300030: items 256_15
+    21300032: items 256_17
+    21300034: items 256_21
+    21300036: items 256_22
+    21300038: items 256_23
+    21300040: items 256_24
+    21300042: items 256_25
+    21300044: items 256_26
+    21300046: items 256_27
+    21300048: items 256_28
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: items 256_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 128
+        width: 16
+        height: 28
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 124
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 109
+        width: 2
+        height: 19
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 95
+        width: 9
+        height: 30
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 95
+        width: 5
+        height: 30
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 117
+        width: 7
+        height: 4
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_6
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 93
+        width: 39
+        height: 30
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_7
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 109
+        width: 7
+        height: 5
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 82
+        width: 15
+        height: 29
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_9
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 74
+        width: 24
+        height: 37
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 92
+        width: 3
+        height: 14
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 92
+        width: 3
+        height: 14
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_12
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 98
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 76
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_14
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 92
+        width: 18
+        height: 3
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_15
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 76
+        width: 32
+        height: 13
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 87
+        width: 4
+        height: 3
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 76
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_22
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 76
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_23
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 76
+        width: 3
+        height: 8
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 43
+        width: 28
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_25
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 72
+        height: 71
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_26
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 43
+        width: 4
+        height: 30
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_27
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 2
+        width: 135
+        height: 69
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items 256_28
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 2
+        width: 35
+        height: 38
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

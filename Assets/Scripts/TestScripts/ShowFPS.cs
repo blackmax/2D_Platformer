@@ -13,10 +13,9 @@ public class ShowFPS : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		timeleft = updateInterval;  
-		Application.targetFrameRate = 60;
 	}
-
 	void Awake () {
+		QualitySettings.vSyncCount = 0;  // VSync must be disabled
 		Application.targetFrameRate = 60;
 	}
 	
